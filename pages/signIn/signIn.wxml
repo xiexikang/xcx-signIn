@@ -1,0 +1,60 @@
+<!--pages/signIn/signIn.wxml-->
+<view class='signIn'>
+  <view class='sign-com'>
+    <view class='thead'>
+      <view class='tt'>已连续签到</view>
+      <view class='mm'><label class='n'>{{signNum}}</label>天</view>
+      <view class='pp'>连续签到7日后每日得3分</view>
+    </view>
+    <view class='modle'>
+        <view class='mol'>
+          <view class='mol-line'></view>
+            <view class='mol-ites'>
+              <view class="ite {{signNum>=min?'hover':''}}" data-n='{{min}}'>
+                <label class='n'>+{{min<7?1:3}}</label>
+              </view>
+              <view class="ite {{signNum>=min+1?'hover':''}}" data-n='{{min+1}}'>
+                <label class='n'>+{{min+1<7?1:3}}</label>
+              </view>
+                <view class="ite {{signNum>=min+2?'hover':''}}" data-n='{{min+2}}'>
+                <label class='n'>+{{min+2<7?1:3}}</label>
+              </view>
+              <view class="ite {{signNum>=min+3?'hover':''}}" data-n='{{min+3}}'>
+                <label class='n'>+{{min+3<7?1:3}}</label>
+              </view>
+              <view class="ite {{signNum>=min+4?'hover':''}}" data-n='{{min+4}}'>
+                <label class='n'>+{{min+4<7?1:3}}</label>
+              </view>
+              <view class="ite {{signNum>=min+5?'hover':''}}" data-n='{{min+5}}'>
+                <label class='n'>+{{min+5<7?1:3}}</label>
+              </view>
+              <view class="ite {{signNum>=min+6?'hover':''}}" data-n='{{max}}'>
+                <label class='n'>+{{min+6<7?1:3}}</label>
+              </view>
+            </view>
+        </view>
+        <view class='moday'>
+          <label class='dd'>{{min}}天</label>
+          <label class='dd'>{{min+1}}天</label>
+          <label class='dd'>{{min+2}}天</label>
+          <label class='dd'>{{min+3}}天</label>
+          <label class='dd'>{{min+4}}天</label>
+          <label class='dd'>{{min+5}}天</label>
+          <label class='dd'>{{max}}天</label>
+        </view>
+      </view>
+
+    <view class='the-btn'>
+      <button type='button' class='btn' bindtap='bindSignIn' data-num="{{signNum}}" disabled='{{signState}}'
+        data-min="{{min}}" data-max="{{max}}" data-be="{{be}}"
+      >签到</button>
+    </view>
+  </view>
+</view>
+
+<view class='explax'>
+  <view class=''>日期开始：{{min}} </view>
+  <view class=''>日期结束：{{max}} </view>
+  <view class=''>签到数：{{signNum}}天</view>
+  <view class=''>切换周期的倍数：{{be}}</view>
+</view>
