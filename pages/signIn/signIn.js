@@ -34,9 +34,7 @@ Page({
       //signState: true
     })
 
-    var min = e.currentTarget.dataset.min,
-      max = e.currentTarget.dataset.max,
-      be = e.currentTarget.dataset.be;
+    var be = e.currentTarget.dataset.be;
 
     if (num % 7 == 0) {
       be += 1;
