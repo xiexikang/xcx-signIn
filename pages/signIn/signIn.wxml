@@ -45,8 +45,7 @@
       </view>
 
     <view class='the-btn'>
-      <button type='button' class='btn' bindtap='bindSignIn' data-num="{{signNum}}" disabled='{{signState}}'
-        data-min="{{min}}" data-max="{{max}}" data-be="{{be}}"
+      <button type='button' class='btn' bindtap='bindSignIn' data-num="{{signNum}}" disabled='{{signState}}' data-be="{{be}}"
       >签到</button>
     </view>
   </view>
