@@ -1,0 +1,43 @@
+/* pages/signIn2/signIn2.wxss */
+.sign-new{ width: 100%; height: 450rpx; overflow: hidden;   position: relative;}
+.sign-new .in{ padding: 40rpx 30rpx; height: 100%; box-sizing: border-box;  }
+.sign-new .new-head{ width: 100%; height:200rpx; overflow: hidden;}
+.sig-tl{ position: absolute; left: 30rpx; top: 40rpx; font-size: 28rpx;}
+.sig-tl .tln{ color: #999;}
+.sig-tl .tln .n{ padding: 0 4rpx; }
+.sig-tl .tlf{ color: #ffcc51; margin-top: 15rpx;}
+.sig-tr{ position: absolute; right: 30rpx; top: 40rpx; font-size: 28rpx;color: #999;}
+.sig-qiu{ width: 190rpx; height: 190rpx; position: absolute; left: 
+50%; top: 40rpx; transform: translateX(-50%); background-repeat: no-repeat; background-size: cover;
+text-align: center;}
+.sig-qiu .ti{ color: #fff; font-size: 36rpx; display: inline-block; margin-top: 65rpx;}
+
+.new-week{ width: auto; height:auto; overflow: hidden; margin-top: 30rpx; }
+.we-mod{ width: 100%; }
+.mo-fen{ width: 100%; overflow: hidden; position: relative; margin-bottom: 10rpx; }
+.mo-fen .f{ height: 34rpx; line-height: 34rpx; padding: 0 14rpx; border-radius: 20rpx;background-color: #ffcc51;
+font-size: 24rpx;  color: #fff;  text-align: center;  }
+.mo-fen .f.f1{ margin-left: 0;}
+.mo-fen .f.f2{ margin-left:41%;}
+.mo-line{ height: 26rpx; width: auto; margin:0 40rpx; position: relative; margin-bottom: 15rpx; }
+.mo-line::after{ content: ""; width: 100%; height: 8rpx; background-color: #f9f9f9; 
+position: absolute; left: 0; top:9rpx; }
+.mo-line .q{ width: 26rpx; height: 26rpx; border-radius: 100%; background-color: #eaeaea;
+ position: absolute; left: 0; top: 0; z-index: 1;}
+.mo-line .q:first-of-type{ left:0;}
+.mo-line .q:nth-of-type(2){ left: 14.5%;}
+.mo-line .q:nth-of-type(3){ left: 30%;}
+.mo-line .q:nth-of-type(4){ left: 47%;}
+.mo-line .q:nth-of-type(5){ left: 64%;}
+.mo-line .q:nth-of-type(6){ left: 80%;}
+.mo-line .q:last-of-type{ left: auto; right: 0;}
+.mo-line .q.hover{ background-color: #4680db; }
+.mo-ri{ width: auto; height: 30rpx; margin:0 40rpx; position: relative;  }
+.mo-ri .t{ height: 30rpx; font-size: 24rpx; color: #999; position: absolute; left: 0; top: 0; z-index: 1;}
+.mo-ri .t:first-of-type{ left:0;}
+.mo-ri .t:nth-of-type(2){ left: 14.5%;}
+.mo-ri .t:nth-of-type(3){ left: 30%;}
+.mo-ri .t:nth-of-type(4){ left: 47%;}
+.mo-ri .t:nth-of-type(5){ left: 64%;}
+.mo-ri .t:nth-of-type(6){ left: 80%;}
+.mo-ri .t:last-of-type{ left: auto; right: 2rpx;}
