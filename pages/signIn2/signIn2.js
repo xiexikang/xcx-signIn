@@ -9,8 +9,8 @@ Page({
     continuityDays7: false,  //连续7
     continuityDays3: false,  //连续3 
     myToday: '',           //周几
-    newSignNum: 6,      //签到天数
-    newSignIntegral: 8,  //签到积分
+    newSignNum: 0,      //签到天数
+    newSignIntegral:0,  //签到积分
     //是否已签到 周一到周日都有这个是否已签到 isSigned
     isNewSignedArr: [
       {
@@ -19,27 +19,27 @@ Page({
       },
       {
         "day": "一",
-        "isSigned": true
+        "isSigned": false
       },
       {
         "day": "二",
-        "isSigned": true
+        "isSigned": false
       },
       {
         "day": "三",
-        "isSigned": true
+        "isSigned": false
       },
       {
         "day": "四",
-        "isSigned": true
+        "isSigned": false
       },
       {
         "day": "五",
-        "isSigned": true
+        "isSigned": false
       },
       {
         "day": "六",
-        "isSigned": true
+        "isSigned": false
       }
     ],
   },
