@@ -1,0 +1,42 @@
+<!--pages/signIn2/signIn2.wxml-->
+<view class='sign-new'>
+  <view class='in'>
+    <view class='new-head'>
+      <view class='sig-tl'>
+        <view class='tln'>已连续签到<label class='n'>{{newSignNum}}</label>天</view>
+        <view class='tlf'>积分：<label class='f'>{{newSignIntegral}}</label></view>
+      </view>
+      <view class='sig-tr'>
+        <navigator url='' class='a-pai'>排行榜</navigator>
+      </view>
+      <!-- 未签到 -->
+      <view wx:if='{{!newSignBtnState}}' class='sig-qiu sig-qiu-no' style="background-image:url('https://xcx.quan5fen.com/Public/xcx-hitui/image/imgs-jyh/sign-no-btn-bg.png')"
+       bindtap='signNewFn' data-num="{{newSignNum}}" >
+        <label class='ti'>签到</label>
+      </view>
+      <!-- 已签到 -->
+      <view wx:if='{{newSignBtnState}}'  class='sig-qiu sig-qiu-yes' style="background-image:url('https://xcx.quan5fen.com/Public/xcx-hitui/image/imgs-jyh/sign-yes-btn-bg.png')">
+        <label class='ti'>已签到</label>
+      </view>
+    </view>
+
+    <view class='new-week' >
+      <view class='we-mod'>
+        <view class='mo-fen'>
+          <label class='f f1' wx:if='{{continuityDays7}}'>+7积分</label>
+          <label class='f f2' wx:if='{{continuityDays3}}'>+3积分</label>
+        </view>
+        <view class='mo-line'>
+          <block wx:for="{{isNewSignedArr}}"  wx:for-item="v" wx:key="k">
+            <label class="q {{v.isSigned?'hover':''}}"></label>
+          </block>
+        </view>
+        <view class='mo-ri'>
+           <block wx:for="{{isNewSignedArr}}"  wx:for-item="v" wx:key="k">
+            <label class="t">{{v.day}}</label>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
