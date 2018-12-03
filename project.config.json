@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.3",
 	"appid": "wx4dba701b1b16ad6d",
-	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%91%A8%E6%97%A5%E5%8E%86-%E8%BF%9E%E7%BB%AD%E7%AD%BE%E5%88%B0",
+	"projectname": "%E5%91%A8%E6%97%A5%E5%8E%86-%E7%A7%AF%E5%88%86",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -24,13 +24,24 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "signIn2",
+					"pathName": "pages/signIn2/signIn2",
+					"query": ""
+				}
+			]
 		}
 	}
 }
