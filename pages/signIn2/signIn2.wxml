@@ -24,12 +24,12 @@
           <label class='f f7' wx:if='{{continuityDays7}}'>+7积分</label>
         </view>
         <view class='mo-line'>
-          <block wx:for="{{isNewSignedArr}}"  wx:for-item="v" wx:key="k">
+          <block wx:for="{{newSignedArr}}"  wx:for-item="v" wx:key="k">
             <label class="q {{v.isSigned?'hover':''}}"></label>
           </block>
         </view>
         <view class='mo-ri'>
-           <block wx:for="{{isNewSignedArr}}"  wx:for-item="v" wx:key="k">
+           <block wx:for="{{newSignedArr}}"  wx:for-item="v" wx:key="k">
             <label class="t">{{v.day}}</label>
           </block>
         </view>

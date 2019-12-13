@@ -12,7 +12,7 @@ Page({
     newSignNum: 0,      //签到天数
     newSignIntegral:0,  //签到积分
     //签到数组
-    isNewSignedArr: [
+    newSignedArr: [
       {
         "day": "一",
         "isSigned": false
@@ -50,9 +50,9 @@ Page({
         newSignNum = that.data.newSignNum,
         today = that.data.myToday;
     const arr = [],
-          newSignArr = [...arr, ...that.data.isNewSignedArr];
+          newSignArr = [...arr, ...that.data.newSignedArr];
     //
-    today = today - 1 > 0 ? today - 1 : 6;
+    today = today - 1 >= 0 ? today - 1 : 6;
     newSignArr[today].isSigned = true;
     
     //当前积分
@@ -63,7 +63,7 @@ Page({
       newSignBtnState: true,
       newSignNum: newSignNum,
       newSignIntegral: curFen,
-      isNewSignedArr: newSignArr,
+      newSignedArr: newSignArr,
     })
 
     that.signAddFen();
@@ -73,13 +73,13 @@ Page({
     //连续 天数-积分： 周三+3：周一，周二，周三（1+1+3=5）； 周六+7：周日到周六（1+1+3+1+1+1+7=15）
   signAddFen(e) {
     var that = this,
-        oneIsSigned = that.data.isNewSignedArr[0].isSigned,
-        twoIsSigned = that.data.isNewSignedArr[1].isSigned,
-        threeIsSigned = that.data.isNewSignedArr[2].isSigned,
-        fourIsSigned = that.data.isNewSignedArr[3].isSigned,
-        fiveIsSigned = that.data.isNewSignedArr[4].isSigned,
-        sixIsSigned = that.data.isNewSignedArr[5].isSigned,
-        sevenIsSigned = that.data.isNewSignedArr[6].isSigned;
+        oneIsSigned = that.data.newSignedArr[0].isSigned,
+        twoIsSigned = that.data.newSignedArr[1].isSigned,
+        threeIsSigned = that.data.newSignedArr[2].isSigned,
+        fourIsSigned = that.data.newSignedArr[3].isSigned,
+        fiveIsSigned = that.data.newSignedArr[4].isSigned,
+        sixIsSigned = that.data.newSignedArr[5].isSigned,
+        sevenIsSigned = that.data.newSignedArr[6].isSigned;
        
     // 另外加分-黄色小框显示 周三+3 , 周日+7
     if (oneIsSigned && twoIsSigned && that.data.myToday == 3) {
