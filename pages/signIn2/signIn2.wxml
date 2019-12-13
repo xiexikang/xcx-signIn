@@ -8,7 +8,7 @@
       </view>
     
       <!-- 未签到 -->
-      <view wx:if='{{!newSignBtnState}}' class='sig-qiu sig-qiu-no' bindtap='bindSignFn' data-num="{{newSignNum}}" >
+      <view wx:if='{{!newSignBtnState}}' class='sig-qiu sig-qiu-no' bindtap='bindSignFn'  >
         <label class='ti'>签到</label>
       </view>
       <!-- 已签到 -->

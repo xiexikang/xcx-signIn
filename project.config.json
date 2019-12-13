@@ -35,13 +35,14 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "signIn2",
 					"pathName": "pages/signIn2/signIn2",
-					"query": ""
+					"query": "",
+					"scene": null
 				}
 			]
 		}

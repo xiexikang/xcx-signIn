@@ -18,10 +18,8 @@ background-repeat: no-repeat; background-size: cover; border-radius: 50%; text-a
 .mo-fen{ width: 100%; height: 34rpx;  overflow: hidden; position: relative; margin-bottom: 10rpx; }
 .mo-fen .f{ height: 34rpx; line-height: 34rpx; padding: 0 14rpx; border-radius: 20rpx;background-color: #ffcc51;
 font-size: 24rpx;  color: #fff;  text-align: center; position: absolute; top: 0;}
-/* .mo-fen .f.f1{ margin-left: 0;}
-.mo-fen .f.f2{ margin-left:41%;} */
 
-.mo-fen .f.f3{ left: 41%;}
+.mo-fen .f.f3{ left: 27%;}
 .mo-fen .f.f7{ right: 0;}
 
 .mo-line{ height: 26rpx; width: auto; margin:0 40rpx; position: relative; margin-bottom: 15rpx; }
