@@ -7,18 +7,23 @@
 .sig-tl .tln .n{ padding: 0 4rpx; }
 .sig-tl .tlf{ color: #ffcc51; margin-top: 15rpx;}
 .sig-tr{ position: absolute; right: 30rpx; top: 40rpx; font-size: 28rpx;color: #999;}
-.sig-qiu{ width: 190rpx; height: 190rpx; position: absolute; left: 
-50%; top: 40rpx; transform: translateX(-50%); background-repeat: no-repeat; background-size: cover;
-text-align: center;}
-.sig-qiu .ti{ color: #fff; font-size: 36rpx; display: inline-block; margin-top: 65rpx;}
+.sig-qiu{ width: 190rpx; height: 190rpx; position: absolute; left: 50%; top: 40rpx; transform: translateX(-50%); 
+background-repeat: no-repeat; background-size: cover; border-radius: 50%; text-align: center;}
+.sig-qiu-no{ background-color: rgb(255, 0, 64);}
+.sig-qiu-yes{ background-color: #999;}
+.sig-qiu .ti{ color: #fff; font-size: 36rpx; display: inline-block; line-height: 190rpx;}
 
 .new-week{ width: auto; height:auto; overflow: hidden; margin-top: 30rpx; }
 .we-mod{ width: 100%; }
-.mo-fen{ width: 100%; overflow: hidden; position: relative; margin-bottom: 10rpx; }
+.mo-fen{ width: 100%; height: 34rpx;  overflow: hidden; position: relative; margin-bottom: 10rpx; }
 .mo-fen .f{ height: 34rpx; line-height: 34rpx; padding: 0 14rpx; border-radius: 20rpx;background-color: #ffcc51;
-font-size: 24rpx;  color: #fff;  text-align: center;  }
-.mo-fen .f.f1{ margin-left: 0;}
-.mo-fen .f.f2{ margin-left:41%;}
+font-size: 24rpx;  color: #fff;  text-align: center; position: absolute; top: 0;}
+/* .mo-fen .f.f1{ margin-left: 0;}
+.mo-fen .f.f2{ margin-left:41%;} */
+
+.mo-fen .f.f3{ left: 41%;}
+.mo-fen .f.f7{ right: 0;}
+
 .mo-line{ height: 26rpx; width: auto; margin:0 40rpx; position: relative; margin-bottom: 15rpx; }
 .mo-line::after{ content: ""; width: 100%; height: 8rpx; background-color: #f9f9f9; 
 position: absolute; left: 0; top:9rpx; }

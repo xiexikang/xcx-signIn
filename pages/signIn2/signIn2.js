@@ -11,12 +11,8 @@ Page({
     myToday: '',           //周几
     newSignNum: 0,      //签到天数
     newSignIntegral:0,  //签到积分
-    //是否已签到 周一到周日都有这个是否已签到 isSigned
+    //签到数组
     isNewSignedArr: [
-      {
-        "day": "日",
-        "isSigned": false
-      },
       {
         "day": "一",
         "isSigned": false
@@ -40,23 +36,29 @@ Page({
       {
         "day": "六",
         "isSigned": false
+      },
+      {
+        "day": "日",
+        "isSigned": false
       }
     ],
   },
 
-  //-------新签到---------
-  signNewFn: function (e) {
+  //-------点击签到---------
+  bindSignFn(e){
     var that = this,
-      num = e.currentTarget.dataset.num;
+        today = that.data.myToday,
+        num = e.currentTarget.dataset.num;
     num++;
     const arr = [],
-      newSignArr = [...arr, ...that.data.isNewSignedArr];
-    newSignArr[that.data.myToday].isSigned = true;
+          newSignArr = [...arr, ...that.data.isNewSignedArr];
+    //
+    today = today - 1 > 0 ? today - 1 : 6;
+    newSignArr[today].isSigned = true;
     that.setData({
       isNewSignedArr: newSignArr
     })
-    //console.log(that.data.isNewSignedArr);
-
+   
     //当前积分
     var curFen = that.data.newSignIntegral + 1;
     that.setData({
@@ -65,11 +67,12 @@ Page({
       newSignIntegral: curFen,
     })
 
-    //签到积分函数
+    
     that.signAddFen();
   },
 
-  //新签到积分 连续 天数-积分： 周三+3：周一，周二，周三（1+1+3=5）； 周日+7：周一到周日（1+1+3+1+1+1+7=15）
+  //签到积分函数 
+    //连续 天数-积分： 周三+3：周一，周二，周三（1+1+3=5）； 周六+7：周日到周六（1+1+3+1+1+1+7=15）
   signAddFen(e) {
     var that = this,
         myDate = new Date(),
@@ -87,26 +90,22 @@ Page({
     //签到后执行
     if (that.data.newSignBtnState){
       // 周三 ： 一 二 三
-      if (!fourIsSigned || !fiveIsSigned || !sixIsSigned || !sevenIsSigned){
-        if (oneIsSigned && twoIsSigned && threeIsSigned) {
-          var fens = that.data.newSignIntegral + 3 - 1;
-          that.setData({
-            newSignIntegral: fens
-          })
-          //console.log(that.data.newSignIntegral);
-        }
+      if (oneIsSigned && twoIsSigned && threeIsSigned) {
+        var fens = that.data.newSignIntegral + 3 - 1;
+        that.setData({
+          newSignIntegral: fens
+        })
       }
-      // 所有签了： 日 一 二 三 四 五 六
+      // 所有签了： 一 二 三 四 五 六 日
       if (oneIsSigned && twoIsSigned && threeIsSigned && fourIsSigned && fiveIsSigned && sixIsSigned && sevenIsSigned) {
         var fens = that.data.newSignIntegral + 7 - 1;
         that.setData({
           newSignIntegral: fens
         })
-        //console.log( that.data.newSignIntegral);
       }
     }
 
-    // 另外加分 周三+3 , 周日+7 黄色小框显示
+    // 另外加分-黄色小框显示 周三+3 , 周六+7
     if (oneIsSigned && twoIsSigned && myToday == 3) {
       that.setData({
         continuityDays3: true
